@@ -25,4 +25,9 @@
             #{id}
         </foreach>
     </delete>
+
+    <insert id="addEmp">
+        insert into emp (username, name, gender, image, dept_id, enroll_date, job, create_time, update_time)
+        values (#{username}, #{name}, #{gender}, #{image}, #{deptId}, #{enrollDate}, #{job}, #{createTime}, #{updateTime})
+    </insert>
 </mapper>

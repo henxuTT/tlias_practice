@@ -34,8 +34,16 @@ public class EmpController {
 
     @DeleteMapping("/{ids}")
     public Result deleteEmps(@PathVariable List<Integer> ids){
-        log.info("delete employees by ids");
-        empService.deleteEmp(ids);
+        log.info("Delete employees by ids");
+        empService.deleteEmps(ids);
+        return Result.success();
+    }
+
+    @PostMapping
+    public Result addEmp(@RequestBody Emp emp){
+        log.info("Add a new employee");
+        empService.addEmp(emp);
+
         return Result.success();
     }
 

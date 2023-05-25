@@ -21,5 +21,6 @@ public interface EmpMapper {
 
     void deleteEmps(List<Integer> ids);
 
+    void addEmp(Emp emp);
 
 }

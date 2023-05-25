@@ -1,5 +1,6 @@
 package com.itheima.service;
 
+import com.itheima.pojo.Emp;
 import com.itheima.pojo.EmpResult;
 
 import java.time.LocalDate;
@@ -9,5 +10,7 @@ public interface EmpService {
 
     EmpResult selectEmp(Integer page, Integer pageSize, String name, Short gender, LocalDate begin, LocalDate end);
 
-    void deleteEmp(List<Integer> ids);
+    void deleteEmps(List<Integer> ids);
+
+    void addEmp(Emp emp);
 }
