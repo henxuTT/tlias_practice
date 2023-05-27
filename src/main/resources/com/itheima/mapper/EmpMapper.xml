@@ -30,4 +30,24 @@
         insert into emp (username, name, gender, image, dept_id, enroll_date, job, create_time, update_time)
         values (#{username}, #{name}, #{gender}, #{image}, #{deptId}, #{enrollDate}, #{job}, #{createTime}, #{updateTime})
     </insert>
+
+    <update id="updateEmp">
+        update emp
+        <set>
+            <if test="image != null">
+                image = #{image},
+            </if>
+            <if test="deptId != null">
+                dept_id = #{deptId},
+            </if>
+            <if test="enrollDate != null">
+                enroll_date = #{enrollDate},
+            </if>
+            <if test="job != null">
+                job = #{job},
+            </if>
+        username = #{username}, name=#{name}, gender=#{gender}, update_time = #{updateTime}
+        </set>
+        where id = #{id}
+    </update>
 </mapper>

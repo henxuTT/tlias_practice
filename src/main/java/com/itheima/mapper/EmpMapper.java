@@ -3,7 +3,6 @@ package com.itheima.mapper;
 import com.itheima.pojo.Emp;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.web.bind.annotation.DeleteMapping;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -23,4 +22,10 @@ public interface EmpMapper {
 
     void addEmp(Emp emp);
 
+
+    @Select("select id, username, password, name, gender, image, job, enroll_date, dept_id,"
+            + " create_time, update_time from emp where id = #{id}")
+    Emp getById(Integer id);
+
+    void updateEmp(Emp emp);
 }
