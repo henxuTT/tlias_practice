@@ -28,4 +28,8 @@ public interface EmpMapper {
     Emp getById(Integer id);
 
     void updateEmp(Emp emp);
+
+    @Select("select id, username, password, name, gender, image, job, enroll_date, dept_id, create_time, update_time from emp " +
+            "where username = #{username} and password = #{password}")
+    Emp login(Emp emp);
 }
