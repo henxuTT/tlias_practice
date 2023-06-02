@@ -23,5 +23,9 @@ aliyun:
     endpoint: https://oss-cn-hangzhou.aliyuncs.com
     accessKeyId: needtopurchase
     accessKeySecret: pairwithid
+    bucketName: empty
+
+
+
 
 
